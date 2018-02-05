@@ -13,13 +13,11 @@ public class Game extends JFrame {
     private Object back; // Для загрузки и инициализации фона
     private PlayersControl players; // Данные об игроках и их настройки
     public static int countStep;
-    private int countClick;
 
     public Game () {
-        countClick = 0;
         initPics(); // Инициализируем картинки
         initPanel(); // Инициализируем поле игры
-        players = new PlayersControl(standartCount, countClick);
+        players = new PlayersControl(standartCount, 0);
         countStep = 0; // Считаем ходы
         initFrame(); // Инициализируем окно игры и настраиваем его
     }
